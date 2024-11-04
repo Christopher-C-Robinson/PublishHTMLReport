@@ -37,6 +37,14 @@
             "defaultValue": "",
             "required": false,
             "helpMarkDown": "Path where Jmeter report containing - content folder, index.html, statistics.json etc are present. Could be comma delimeted path for multiple reports."
+        },
+        {
+            "name": "multipleHTMLPaths",
+            "type": "string",
+            "label": "Multiple HTML Paths",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Comma-separated paths for multiple HTML files. Needed only when htmlType is genericHTML."
         }
     ],
     "execution": {

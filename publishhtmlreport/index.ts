@@ -95,8 +95,10 @@ async function run() {
             })
         }
         if (inputString == 'genericHTML') {
-            const newhtmlPath: string | undefined = tl.getInput('htmlPath', false);
-            console.log('##vso[task.addattachment type=replacedhtml;name=content;]' + newhtmlPath!);
+            const newhtmlPaths: string = tl.getInput('htmlPath', false) || '';
+            for (let newhtmlPath of newhtmlPaths.split(',')) {
+                console.log('##vso[task.addattachment type=replacedhtml;name=content;]' + newhtmlPath!);
+            }
         }
     }
     catch (err) {

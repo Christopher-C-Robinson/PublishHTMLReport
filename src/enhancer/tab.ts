@@ -37,7 +37,7 @@ export class InfoTab extends Controls.BaseControl {
 							taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId, timelineId, recId, "replacedhtml", taskAttachment.name).then((attachementContent) => {
 								var newhtml = this.arrayBufferToString(attachementContent);
 								document.body.style.overflow = "visible";
-								document.getElementById("wrapper").innerHTML = newhtml
+								document.getElementById("wrapper").innerHTML += newhtml;
 							});
 						}
 					});
